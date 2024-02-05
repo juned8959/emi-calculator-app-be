@@ -1,0 +1,19 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+
+server:
+  port: 9292
+
+app:
+  cors:
+    allowed-headers:
+      - "*"
+    allowed-methods:
+      - "POST"
+      - "OPTIONS"
+    allowed-origins:
+      - "http://localhost:4200"
