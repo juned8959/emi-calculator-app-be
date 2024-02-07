@@ -22,3 +22,14 @@ Backend for emi-calculator app(Java)
   --Post call - `http://localhost:9292/api/calculate/emi`
   --In-memory database console - `http://localhost:9292/h2-console`
     -- jdbc url - `jdbc:h2:mem:testdb`
+
+## Curl Command
+`curl --location 'http://localhost:9292/api/calculate/emi' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"principal": 1000000.0,
+"yearlyRateOfInterest": 7.2,
+"tenureInYears": 10,
+"email":"kpn@kpn.com"
+}
+'`
