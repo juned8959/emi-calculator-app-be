@@ -1,6 +1,8 @@
 package com.rabobank.emi.calculator.util;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class EmiCalculatorUtils {
     /**
@@ -26,7 +28,8 @@ public class EmiCalculatorUtils {
      * @return The formatted EMI amount.
      */
     private static double formatEmi(double emi) {
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance(Locale.US);
+        DecimalFormat df = new DecimalFormat("#.##", symbols);
         return Double.parseDouble(df.format(emi));
     }
 }
